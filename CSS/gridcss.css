@@ -1,0 +1,282 @@
+body {
+    background: #eee;
+}
+textarea {
+    vertical-align: top;
+
+    
+  }
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1.85fr 1.1fr 1.1fr 1.1fr 1.1fr 0.6fr;
+    grid-template-rows: 1fr 1fr 1fr 0.7fr;
+    grid-template-areas:
+      "auction auction board  n-hand hcp-cards ."
+      "data data w-hand . e-hand hand-buttons"
+      "pbn-data pbn-data empty s-hand hcp-cards1 deal"
+      "create-clear create-clear empty nav-buttons nav-buttons nav-buttons";
+    grid-gap: 0.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: center;
+    }
+#hcp {
+  display: grid;
+  justify-content:space-evenly;
+  grid-area: hcp-cards;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr ;
+  grid-template-areas:
+  "hcpn hcpn hcpn"
+  "hcpw hcp-text hcpe"
+  "empty hcps empty" ;
+}
+#hcp-text{
+  background :#ee4f1e;
+  font-size: 20px;
+  align-self: center;
+}
+#empty{
+    font-size: 20px;
+}
+#hcpn{
+  align-self: center;
+}
+#hcpw{
+  align-self: center;
+}
+#hcpe{
+  align-self: center;
+}
+#hcps{
+  align-self: center;
+}
+#pbn-data {
+  grid-area: pbn-data;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#auction {
+  display: flexbox;
+  grid-area: auction;
+  margin-left: -400px;
+  padding-top: 30px;
+}
+
+#data {
+  display:grid;
+  justify-content:space-evenly;
+  grid-area: data;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 5fr 2.5fr ;
+  grid-template-areas: 
+  "Npoints Spoints Suits Epoints Wpoints"
+  "totalPoints totalPoints totalPoints totalPoints totalPoints";
+}
+
+#totalPoints {
+  grid-area: totalPoints;
+
+}
+
+#totalpointcontainer{
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content:space-evenly;
+  flex-direction: row;
+  width: 100%;
+}
+
+#Spoints{
+  margin: 20px;
+  justify-self: left;
+  background: #eee;
+
+}
+#Npoints{
+  margin: 20px;
+  justify-self: right;
+      background: #eee;
+}
+
+
+#Wpoints{
+  margin: 20px;
+  background: #eee;   
+  justify-self: right;
+
+}
+#Epoints{
+  margin: 20px;
+  background: #eee;
+  justify-self: left;
+
+}
+
+
+#board {
+  grid-area: board;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  align-self: center;
+
+}
+
+
+#cards {
+  display: grid;
+  justify-content:space-evenly;
+  grid-area: hcp-cards1;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr ;
+  grid-template-areas:
+  "cardsn cardsn cardsn"
+  "cardsw hcp-text cardse"
+  "empty cardss empty" ;
+}
+#cardsn{
+  align-self: center;
+}
+#cardsw{
+  align-self: center;
+}
+#cardse{
+  align-self: center;
+}
+#cardss{
+  align-self: center;
+}
+#unknown{
+  align-self: center;
+}
+#n-hand {
+  border: 1px solid;
+  grid-area: n-hand;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+#w-hand {
+  border: 1px solid;
+  grid-area: w-hand;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+#e-hand {
+  border: 1px solid;
+  grid-area: e-hand;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+#hand-buttons {
+  grid-area: hand-buttons;
+  display:flex;
+  flex-direction: column;
+  justify-content:space-evenly;
+  align-self: auto;
+  padding: 10%;
+}
+
+
+#s-hand {
+  border: 1px solid;
+  grid-area: s-hand;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+
+
+#deal {
+  grid-area: deal;
+  display:flex;
+  flex-direction: column;
+  justify-content:space-evenly;
+  align-self: auto;
+  padding: 10%;
+}
+
+#create-clear {
+  grid-area: create-clear;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#nav-buttons {
+  display:flex;
+  grid-template-columns: 2fr 1fr;
+  grid-area: nav-buttons;
+  padding: 4vh;
+}
+
+.flex-nav-buttons{
+  justify-content:space-evenly;
+
+}
+
+.hand{
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content:space-evenly;
+  align-items: center;
+}
+
+.buttonBig{
+  font-size: 2rem;
+  width: 8em;
+  height: 2.5em;  
+}
+
+.buttonMedium{
+  font-size: 1rem;
+  width: 8em;
+  height: 2em;  
+  align-content: center;
+} 
+.buttonSmall{
+
+  font-size: 0.7rem;
+  width: 8em;
+  height: 2em;  
+  /* align-content: center; */
+} 
+.input1{
+  width: 2vw;    
+  align-content: flex-start;
+}
+.inputSmall{
+  width: 2vw;    
+}
+.inputCards{
+  width: 9vw; 
+}
+.form-row1{
+  justify-content:space-evenly;
+}
+
+a {
+  text-align: center;
+  display: block;
+  font-family: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas:
+      "nav"
+      "sidebar"
+      "main"
+      "content1"
+      "content2"
+      "content3"
+      "footer";
+  }
+}

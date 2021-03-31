@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hand Generator</title>
+    <link rel="icon" href="images\cards.ico">
+    <link rel="stylesheet" href="CSS\gridcss.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="container">
+
+    <div id="auction">
+        <lable for="auctionTA" > Auction:</lable>
+        <textarea id="auctionTA" name="auctionTA" rows="10" cols="30"></textarea>
+    </div>
+    <div id="board">
+        <lable for="board" > Board:</lable>
+        <input type="text" size="3" id="boardNo" disabled>
+    </div>
+ 
+    <div id="empty"></div>
+ 
+    <div id="n-hand">
+        <div class="hand">
+            <div class="form-row">
+              <label for="Spade">S: </label>
+              <input type="text" id="spade" class="inputCards">
+            </div>
+            <div class="form-row">
+              <label for="Heart">H: </label>
+              <input type="text" id="heart" class="inputCards">
+            </div>
+            <div class="form-row">
+              <label for="Diamond">D: </label>
+              <input type="text" id="diamond" class="inputCards">
+            </div>
+            <div class="form-row">
+              <label for="Club">C: </label>
+              <input type="text" id="club" class="inputCards">
+            </div>
+        </div>
+    </div>
+  
+    <div id="hcp">
+        <div id="empty"></div>
+        <div id="hcpn">
+            <input type="text" id="pointsN" class="inputSmall" disabled>
+        </div>
+        <div id="empty"></div>
+        <div id="hcpw">
+            <input type="text" id="pointsW" class="inputSmall" disabled>
+        </div>
+        <div id="hcp-text">
+            HCP
+        </div>
+        <div id="hcpe">
+            <input type="text" id="pointsE" class="inputSmall" disabled>
+        </div>
+
+        <div id="empty"></div>
+        <div id="hcps">
+            <input type="text" id="pointsS" class="inputSmall" disabled>
+        </div>  
+
+        <div id="empty"></div>
+    </div>
+  
+    <div id="data">
+        <div id="Npoints">
+                North<br>
+                <input type="text" id="NoOfSpadeN" class="inputSmall" value="0-13"><br><br>
+                <input type="text" id="NoOfHpadeN" class="inputSmall" value="0-13"><br><br>
+                <input type="text" id="NoOfDpadeN" class="inputSmall" value="0-13"><br><br>
+                <input type="text" id="NoOfCpadeN" class="inputSmall" value="0-13"><br><br>
+                <input type="text" id="totalPointsN" class="inputSmall" value="0-13"><br><br>
+
+        </div>
+        <div id="Spoints">
+            South<br>
+            <input type="text" id="NoOfSpadeS" class="inputSmall" value="0-13"><br><br>
+            <input type="text" id="NoOfHpadeS" class="inputSmall" value="0-13"><br><br>
+            <input type="text" id="NoOfDpadeS" class="inputSmall" value="0-13"><br><br>
+            <input type="text" id="NoOfCpadeS" class="inputSmall" value="0-13"><br><br>
+            <input type="text" id="totalPointsS" class="inputSmall" value="0-13"><br><br>
+
+        </div>
+        <div id="Suits">
+           <br><br><br>
+           S<br><BR>
+            H <br><BR>
+            D<br><BR>
+            C<br><BR><BR>
+            HCP
+        </div>
+        <div id="Wpoints">
+            West<br>
+            <input type="text" id="NoOfSpadeW" class="inputSmall" value="0-13"><br><br>
+            <input type="text" id="NoOfHpadeW" class="inputSmall" value="0-13"><br><br>
+            <input type="text" id="NoOfDpadeW" class="inputSmall" value="0-13"><br><br>
+            <input type="text" id="NoOfCpadeW" class="inputSmall" value="0-13"><br><br>
+            <input type="text" id="totalPointsW" class="inputSmall" value="0-13"><br><br>
+
+        </div>
+        <div id="Epoints">
+            East<br>
+            <input type="text" id="NoOfSpadeE" class="inputSmall" value="0-13"><br><br>
+            <input type="text" id="NoOfHpadeE" class="inputSmall" value="0-13"><br><br>
+            <input type="text" id="NoOfDpadeE" class="inputSmall" value="0-13"><br><br>
+            <input type="text" id="NoOfCpadeE" class="inputSmall" value="0-13"><br><br>
+            <input type="text" id="totalPointsE" class="inputSmall" value="0-13"><br><br>
+
+        </div>
+        <div id="totalPoints">
+            <div id="totalpointcontainer">
+                <div class="nsPoints">
+                    <input type="text" id="totslNSPoits" class="inputSmall" value="0-40">
+                </div>
+                <div class="totalText">total HCP</div>
+                <div class="ewPoints">
+                    <input type="text" id="totslEWPoits" class="inputSmall" value="0-40">
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <div id="w-hand">
+        <div class="hand">
+            <div class="form-row">
+              <label for="Spade">S: </label>
+              <input type="text" id="spade" class="inputCards">
+            </div>
+            <div class="form-row">
+              <label for="Heart">H: </label>
+              <input type="text" id="heart" class="inputCards">
+            </div>
+            <div class="form-row">
+              <label for="Diamond">D: </label>
+              <input type="text" id="diamond" class="inputCards">
+            </div>
+            <div class="form-row">
+              <label for="Club">C: </label>
+              <input type="text" id="club" class="inputCards">
+            </div>
+        </div>
+    </div>
+  
+    <div id="e-hand">
+        <div class="hand">
+            <div class="form-row">
+              <label for="Spade">S: </label>
+              <input type="text" id="spade" class="inputCards">
+            </div>
+            <div class="form-row">
+              <label for="Heart">H: </label>
+              <input type="text" id="heart" class="inputCards">
+            </div>
+            <div class="form-row">
+              <label for="Diamond">D: </label>
+              <input type="text" id="diamond" class="inputCards">
+            </div>
+            <div class="form-row">
+              <label for="Club">C: </label>
+              <input type="text" id="club" class="inputCards">
+            </div>
+        </div>
+    </div>
+  
+    <div id="hand-buttons">
+        <button type="button" class="buttonMedium">Rotate hands</button>
+        <button type="button" class="buttonMedium">Swap N<>S</button>
+        <button type="button" class="buttonMedium">Swap E<>W</button>
+
+    </div>
+  
+    <div id="pbn-data">
+        <div class="hand">
+            <div class="form-row">
+                <label for="NumberOfDeals:">Number of deals: </label>
+                <input type="text" id="NumberOfDeals" class="inputSmall" >
+            </div>
+            <div class="form-row">
+                <label for="PbnFileName:">PBN file name: </label>
+                <input type="text" id="PbnFileName" >   
+            </div>
+        </div>
+    </div>
+
+    <div id="s-hand"> 
+        <div class="hand">
+            <div class="form-row">
+                <label for="Spade">S: </label>
+                <input type="text" id="spade" class="inputCards">
+            </div>
+            <div class="form-row">
+                <label for="Heart">H: </label>
+                <input type="text" id="heart" class="inputCards">
+            </div>
+            <div class="form-row">
+                <label for="Diamond">D: </label>
+                <input type="text" id="diamond" class="inputCards">
+            </div>
+            <div class="form-row">
+                <label for="Club">C: </label>
+                <input type="text" id="club" class="inputCards">
+            </div>
+        </div>
+    </div>
+    <div id="cards">
+        <div id="empty"></div>
+        <div id="cardsn">
+            <input type="text" id="cardsn" class="inputSmall" disabled>
+        </div>
+        <div id="empty"></div>
+        <div id="cardsw">
+            <input type="text" id="cardsw" class="inputSmall" disabled>
+        </div>
+        <div id="hcp-text">
+            Cards
+        </div>
+        <div id="cardse">
+            <input type="text" id="cardse" class="inputSmall" disabled>
+        </div>
+
+        <div id="empty"></div>
+        <div id="cardss">
+            <input type="text" id="cardss" class="inputSmall" disabled>
+        </div>  
+
+        <div id="empty"></div>
+    </div>
+    <div id="create-clear">
+        
+        <button type="button" class="buttonBig">Create Deals</button>
+        <button type="button" class="buttonBig">Clear All</button>
+    </div>
+    <div id="deal">
+        <button type="button" class="buttonMedium">Duplicate Deal</button>
+        <button type="button" class="buttonMedium">Remove Deal</button>
+        <button type="button" class="buttonMedium">Restore</button>
+        <button type="button" class="buttonMedium">Save hand</button>
+
+    </div>
+    
+    <div id="nav-buttons">
+        <div class="flex-nav-buttons item1">    
+            <button type="button" class="buttonSmall"> << </button>
+            <button type="button" class="buttonSmall"> < </button>
+            <button type="button" class="buttonSmall"> > </button>
+            <button type="button" class="buttonSmall"> >> </button>
+            <input type="text" id="unknown" class="inputSmall" disabled>
+        </div>
+        <div class="flex-nav-buttons item1"> 
+            <button type="button" class="buttonSmall"> X </button>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
