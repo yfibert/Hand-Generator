@@ -1,5 +1,6 @@
 body {
-    background: #eee;
+    background: rgb(233, 232, 196);
+    margin:0px;
 }
 textarea {
     vertical-align: top;
@@ -12,9 +13,9 @@ textarea {
     grid-template-columns: 1.85fr 1.1fr 1.1fr 1.1fr 1.1fr 0.6fr;
     grid-template-rows: 1fr 1fr 1fr 0.7fr;
     grid-template-areas:
-      "auction auction board  n-hand hcp-cards ."
+      "auction auction boardInfo  n-hand hcp-cards printbtn"
       "data data w-hand . e-hand hand-buttons"
-      "pbn-data pbn-data empty s-hand hcp-cards1 deal"
+      "pbn-data DoubleDummyTable empty s-hand hcp-cards1 deal"
       "create-clear create-clear empty nav-buttons nav-buttons nav-buttons";
     grid-gap: 0.2rem;
     font-weight: 800;
@@ -22,6 +23,34 @@ textarea {
     font-size: 12px;
     text-align: center;
     }
+#printbtn{
+  grid-area: printbtn;
+  background-image:url('/images/printer.png') no-repeat;
+  
+}
+.buttonprint{
+  font-size: 1rem;
+  width: 8em;
+  height: 6em;  
+  margin:30% 0% 25% 0%; 
+  text-transform: uppercase;
+  font-size: 1.5em;
+  background:url('/images/printer.png') center no-repeat; background-size: 100% 100%;
+  
+}
+
+#DDtable{
+  /* table-layout: auto; */
+
+  background-color: rgb(221, 240, 118);
+  border: 1px solid black;
+}
+
+table, th, td {
+  border: 1px solid black;
+  width: 25em;
+  height: 3.7em;
+}
 #hcp {
   display: grid;
   justify-content:space-evenly;
@@ -33,37 +62,54 @@ textarea {
   "hcpw hcp-text hcpe"
   "empty hcps empty" ;
 }
+
 #hcp-text{
-  background :#ee4f1e;
-  font-size: 20px;
+  background :#2fee1e;
+  font-size: 30px;
   align-self: center;
+  border-radius: 5em;
 }
+
 #empty{
     font-size: 20px;
 }
+
 #hcpn{
   align-self: center;
 }
+
 #hcpw{
   align-self: center;
 }
+
 #hcpe{
   align-self: center;
 }
+
 #hcps{
   align-self: center;
 }
+
 #pbn-data {
   grid-area: pbn-data;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
 }
 
 #auction {
-  display: flexbox;
   grid-area: auction;
-  margin-left: -400px;
-  padding-top: 30px;
+  text-align: left;
+}
+
+#labelTA{
+  position: relative;
+  left:4em;
+  top:2em;
+}
+
+#auctionTA{
+  position: relative;
+  left:4em;
+  top:2em;
+  resize: none;
 }
 
 #data {
@@ -93,38 +139,52 @@ textarea {
 #Spoints{
   margin: 20px;
   justify-self: left;
-  background: #eee;
+  background: rgb(233, 232, 196);
 
 }
+
 #Npoints{
   margin: 20px;
   justify-self: right;
-      background: #eee;
+      background:rgb(233, 232, 196);
 }
 
 
 #Wpoints{
   margin: 20px;
-  background: #eee;   
+  background:rgb(233, 232, 196);   
   justify-self: right;
 
 }
+
 #Epoints{
   margin: 20px;
-  background: #eee;
+  background: rgb(233, 232, 196);
   justify-self: left;
-
 }
 
 
-#board {
-  grid-area: board;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
-  align-self: center;
-
+.boardInfo {
+  grid-area: boardInfo;
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content:space-evenly;
+}
+#boardNoLbl{
+  text-align: left;
+  margin: 0px;
 }
 
+#boardNo{
+  margin-left: 5.3em;
+}
+#Dealer{
+  margin-left: 5em;
+}
+#Vul{
+  margin-left: 1em;
+}
 
 #cards {
   display: grid;
@@ -137,39 +197,48 @@ textarea {
   "cardsw hcp-text cardse"
   "empty cardss empty" ;
 }
+
 #cardsn{
   align-self: center;
 }
+
 #cardsw{
   align-self: center;
 }
+
 #cardse{
   align-self: center;
 }
+
 #cardss{
   align-self: center;
 }
+
 #unknown{
   align-self: center;
 }
+
 #n-hand {
   border: 1px solid;
   grid-area: n-hand;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
 }
+
 #w-hand {
   border: 1px solid;
   grid-area: w-hand;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
 }
+
 #e-hand {
   border: 1px solid;
   grid-area: e-hand;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
 }
+
 #hand-buttons {
   grid-area: hand-buttons;
   display:flex;
@@ -179,15 +248,12 @@ textarea {
   padding: 10%;
 }
 
-
 #s-hand {
   border: 1px solid;
   grid-area: s-hand;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
 }
-
-
 
 #deal {
   grid-area: deal;
@@ -200,8 +266,6 @@ textarea {
 
 #create-clear {
   grid-area: create-clear;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
 }
 
 #nav-buttons {
@@ -213,7 +277,6 @@ textarea {
 
 .flex-nav-buttons{
   justify-content:space-evenly;
-
 }
 
 .hand{
@@ -226,8 +289,22 @@ textarea {
 
 .buttonBig{
   font-size: 2rem;
-  width: 8em;
-  height: 2.5em;  
+  width: 10em;
+  height: 3em;  
+  color: #bb0f0f;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 1rem;
+  padding: 0.5rem;
+  border: 2px solid #052442;
+  border-radius: 5rem;
+  background-color: turquoise;
+  
+}
+.buttonBig:hover {
+  background: #5237c8;
+  color: #0eb245;
 }
 
 .buttonMedium{
@@ -235,7 +312,15 @@ textarea {
   width: 8em;
   height: 2em;  
   align-content: center;
+  -webkit-transition: all 31s;
+  -moz-transition: all 3s;
+  transition: all 0.5s;
+
+  -webkit-box-shadow: 0px 6px 0px #d300a5;
+  -moz-box-shadow: 0px 10px 0px #00d312;
+  box-shadow: 5px 4px 4px #252416;
 } 
+
 .buttonSmall{
 
   font-size: 0.7rem;
@@ -243,40 +328,31 @@ textarea {
   height: 2em;  
   /* align-content: center; */
 } 
+
 .input1{
   width: 2vw;    
   align-content: flex-start;
 }
+
 .inputSmall{
   width: 2vw;    
 }
+
 .inputCards{
   width: 9vw; 
 }
-.form-row1{
+
+#pbn-data{
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
   justify-content:space-evenly;
+  align-items: left;
 }
 
-a {
-  text-align: center;
-  display: block;
-  font-family: inherit;
-  text-decoration: none;
-  font-weight: bold;
-  margin: 1rem;
-}
-
-@media only screen and (max-width: 550px) {
-  .container {
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
-    grid-template-areas:
-      "nav"
-      "sidebar"
-      "main"
-      "content1"
-      "content2"
-      "content3"
-      "footer";
-  }
+.pbn-row{
+  text-align: left;
+  width:100%;
+  height: 100%;
+  margin-left: 3em;
 }
